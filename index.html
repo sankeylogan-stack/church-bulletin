@@ -81,6 +81,25 @@
     white-space: nowrap;
     font-weight: 600;
   }
+  .date-note {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin: 3px 0 0;
+  }
+  .occasion-badge {
+    display: inline-block;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--paper-card);
+    background: var(--brass);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
 
   .rule {
     border: none;
@@ -90,6 +109,27 @@
   .rule.thick {
     border-top: 2px solid var(--ink);
     margin: 28px 0;
+  }
+
+  .scripture-ref {
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .scripture-ref::before,
+  .scripture-ref::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
   }
 
   .scripture-text {
@@ -106,14 +146,44 @@
     color: var(--burgundy);
     margin: 0;
   }
+  .sermon-note {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 10px 0 0;
+  }
+  .sermon-note a {
+    color: var(--burgundy);
+    font-weight: 600;
+  }
+  .submit-prayer-note {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 10px 0 0;
+  }
+  .submit-prayer-note a {
+    color: var(--burgundy);
+    font-weight: 600;
+    text-decoration: underline;
+  }
 
-  section.todays-text {
+  section.todays-text,
+  section.prayer-special {
     background: linear-gradient(175deg, rgba(168, 124, 63, 0.10), rgba(168, 124, 63, 0.03));
     border-left: 3px solid var(--brass);
     padding: 18px 22px 20px;
     margin: 24px 0;
   }
-  section.todays-text h2 { margin-bottom: 12px; }
+  section.todays-text h2,
+  section.prayer-special h2 { margin-bottom: 12px; }
+
+  .prayer-body {
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0;
+    max-width: 62ch;
+  }
 
   section { margin: 30px 0; }
   section:first-of-type { margin-top: 0; }
@@ -327,25 +397,32 @@
   "churchName": "Stanton Bible Methodist Church",
   "tagline": "Sunday Worship Bulletin",
   "weekOf": "Sunday, September 21",
-  "scripture": "Ecclesiastes 4 - vv. 4-9, 13\n\n4 Again, I considered all travail, and every right work, that for this a man is envied of his neighbour. This is also vanity and vexation of spirit.\n5 The fool foldeth his hands together, and eateth his own flesh.\n6 Better is an handful with quietness, than both the hands full with travail and vexation of spirit.\n7 Then I returned, and I saw vanity under the sun.\n8 There is one alone, and there is not a second; yea, he hath neither child nor brother: yet is there no end of all his labour; neither is his eye satisfied with riches; neither saith he, For whom do I labour, and bereave my soul of good? This is also vanity, yea, it is a sore travail.\n9 Two are better than one; because they have a good reward for their labour.\n13 Better is a poor and a wise child than an old and foolish king, who will no more be admonished. ",
-  "preacher": "Preaching – Pastor Logan",
-  "welcome": "We're glad you're here this morning. Whether this is your first Sunday with us or your thousandth, may you meet with the Lord and leave encouraged in His holiness and grace.",
+  "occasion": "Conference Sunday",
+  "scriptureRef": "Ecclesiastes 4:4\u20139, 13",
+  "scripture": "4 Again, I considered all travail, and every right work, that for this a man is envied of his neighbour. This is also vanity and vexation of spirit.\n5 The fool foldeth his hands together, and eateth his own flesh.\n6 Better is an handful with quietness, than both the hands full with travail and vexation of spirit.\n7 Then I returned, and I saw vanity under the sun.\n8 There is one alone, and there is not a second; yea, he hath neither child nor brother: yet is there no end of all his labour; neither is his eye satisfied with riches; neither saith he, For whom do I labour, and bereave my soul of good? This is also vanity, yea, it is a sore travail.\n9 Two are better than one; because they have a good reward for their labour.\n13 Better is a poor and a wise child than an old and foolish king, who will no more be admonished. ",
+  "preacher": "Preaching – Conference President Doug Eads",
+  "welcome": "We're glad you're here this morning. Whether this is your first Sunday with us or your thousandth, may you meet with the Lord and leave encouraged in His holiness and grace. A warm welcome to Conference President Doug Eads and his wife, Judy, as we celebrate Conference Sunday together \u2014 we're honored to have you with us!",
   "purpose": "Love God Rightly - Love Others Selflessly - Make Disciples Tirelessly ",
+  "dateNote": "Everything for this Sunday, in one place.",
+  "prayerSalvationRef": "Psalm 51:10",
+  "prayerSalvationVerse": "\u201CCreate in me a pure heart, O God, and renew a steadfast spirit within me.\u201D",
+  "prayerSalvationText": "Lord, I know I\u2019m a sinner, and I need your help to guide my life. I give total control to you, God. I\u2019m sorry for living in willful sin; cleanse my heart and mind to live for you.",
+  "prayerHolinessRef": "2 Corinthians 7:1",
+  "prayerHolinessVerse": "\u201CHaving therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God.\u201D",
+  "prayerHolinessText": "Holy Spirit, we ask that you fill us and sanctify us so that we may be lights in a dark world. Cleanse our thoughts, motives, and desires; if anything in our lives displeases You, we ask you to remove it. Help us to be examples of your Living Word to the world. Let my life be a living sacrifice that honors You in all I do.",
   "waysToServe": [],
   "order": [
     "Opening Prayer",
     "Meet and Greet",
     "Congregational Singing",
-    "Special Song - Jennifer",
+    "Special Song - Owen and Robin Yoder",
     "Sermon",
     "Closing Prayer"
   ],
   "announcements": [
     "Youth service at 4:30 tonight ",
-    "Conference Sunday on September 27 with the Eads",
     "Homecoming Sunday on October 4 with the Ingrams",
-    "Miranda needs to meet with all the ladies up front after church this morning",
-    "Who will YOU serve this week? Check our the Serve Board in the foyer!"
+    "Who will YOU serve this week? Check out the Serve Board in the foyer!"
   ],
   "upcoming": [
     "AL IHC - Nov. 4-6",
@@ -360,9 +437,12 @@
     "Rhonda Headley - cancer",
     "Donnie Carter's sister Kristine - stroke"
   ],
+  "prayerRequestLink": "",
   "givingLink": "",
   "livestreamLink": "",
   "websiteLink": "",
+  "sermonLink": "https://www.youtube.com/watch?v=1kt07wYViqA&list=PLAtDkqKIC4FE",
+  "lastSermonTitle": "5 Deterrents To Deep Relationships",
   "contactName": "",
   "contactPhone": "",
   "contactAddress": "",
@@ -370,15 +450,7 @@
 }</script>
 
 <div class="wrap">
-  <div class="sheet" id="sheet"><div class="masthead"><div><p class="church-name">Stanton Bible Methodist Church</p><p class="tagline">Sunday Worship Bulletin</p></div><p class="week-of">Sunday, September 21</p></div><hr class="rule thick"><section class="todays-text"><h2>Today’s Text</h2><p class="scripture-text">Ecclesiastes 4 - vv. 4-9, 13
-
-4 Again, I considered all travail, and every right work, that for this a man is envied of his neighbour. This is also vanity and vexation of spirit.
-5 The fool foldeth his hands together, and eateth his own flesh.
-6 Better is an handful with quietness, than both the hands full with travail and vexation of spirit.
-7 Then I returned, and I saw vanity under the sun.
-8 There is one alone, and there is not a second; yea, he hath neither child nor brother: yet is there no end of all his labour; neither is his eye satisfied with riches; neither saith he, For whom do I labour, and bereave my soul of good? This is also vanity, yea, it is a sore travail.
-9 Two are better than one; because they have a good reward for their labour.
-13 Better is a poor and a wise child than an old and foolish king, who will no more be admonished. </p><p class="preacher-line">Preaching – Pastor Logan</p></section><hr class="rule"><section class="welcome"><h2>Welcome</h2><p>We're glad you're here this morning. Whether this is your first Sunday with us or your thousandth, may you meet with the Lord and leave encouraged in His holiness and grace.</p></section><section class="purpose"><h2>Purpose</h2><p>Love God Rightly - Love Others Selflessly - Make Disciples Tirelessly </p></section><section><h2>Order of Service</h2><ol class="order"><li><span>Opening Prayer</span></li><li><span>Meet and Greet</span></li><li><span>Congregational Singing</span></li><li><span>Special Song - Jennifer</span></li><li><span>Sermon</span></li><li><span>Closing Prayer</span></li></ol></section><section><h2>Announcements</h2><ul class="plain"><li>Youth service at 4:30 tonight </li><li>Conference Sunday on September 27 with the Eads</li><li>Homecoming Sunday on October 4 with the Ingrams</li><li>Miranda needs to meet with all the ladies up front after church this morning</li><li>Who will YOU serve this week? Check our the Serve Board in the foyer!</li></ul></section><section><h2>Prayer Requests</h2><ul class="plain prayer"><li>Joe + Juanita</li><li>Cally - brain surgery</li><li>Leslie Benton </li><li>Rhonda Headley - cancer</li><li>Donnie Carter's sister Kristine - stroke</li></ul></section><section><h2>Upcoming Events</h2><ul class="plain"><li>AL IHC - Nov. 4-6</li><li>Laymen Appreciation Sunday - Nov. 15</li><li>Tentative Business Meeting - Nov. 15</li><li>Christmas Program - Dec. 20</li></ul></section><div class="foot"><button class="sans" id="edit-btn" type="button">Edit this week’s bulletin</button></div><p class="updated-note">Updated Sep 20, 2026</p></div>
+  <div class="sheet" id="sheet"></div>
 </div>
 
 <script>
@@ -406,25 +478,34 @@
     html += '<div><p class="church-name">' + esc(d.churchName) + '</p>';
     if (d.tagline) html += '<p class="tagline">' + esc(d.tagline) + '</p>';
     html += '</div>';
-    if (d.weekOf) html += '<p class="week-of">' + esc(d.weekOf) + '</p>';
+    html += '<div style="text-align:right">';
+    if (d.weekOf) {
+      html += '<p class="week-of">' + esc(d.weekOf);
+      if (d.occasion) html += '<span class="occasion-badge">' + esc(d.occasion) + '</span>';
+      html += '</p>';
+    }
+    if (d.dateNote) html += '<p class="date-note">' + esc(d.dateNote) + '</p>';
+    html += '</div>';
     html += '</div>';
 
     html += '<hr class="rule thick">';
-
-    if (d.scripture || d.preacher) {
-      html += '<section class="todays-text"><h2>Today\u2019s Text</h2>';
-      if (d.scripture) html += '<p class="scripture-text">' + esc(d.scripture) + '</p>';
-      if (d.preacher) html += '<p class="preacher-line">' + esc(d.preacher) + '</p>';
-      html += '</section>';
-      html += '<hr class="rule">';
-    }
 
     if (d.welcome) {
       html += '<section class="welcome"><h2>Welcome</h2><p>' + esc(d.welcome) + '</p></section>';
     }
 
     if (d.purpose) {
-      html += '<section class="purpose"><h2>Purpose</h2><p>' + esc(d.purpose) + '</p></section>';
+      html += '<section class="purpose"><h2>Our Purpose</h2><p>' + esc(d.purpose) + '</p></section>';
+    }
+
+    if (d.scriptureRef || d.scripture || d.preacher || d.sermonLink) {
+      html += '<section class="todays-text"><h2>Today\u2019s Text</h2>';
+      if (d.scriptureRef) html += '<p class="scripture-ref">' + esc(d.scriptureRef) + '</p>';
+      if (d.scripture) html += '<p class="scripture-text">' + esc(d.scripture) + '</p>';
+      if (d.preacher) html += '<p class="preacher-line">' + esc(d.preacher) + '</p>';
+      if (d.sermonLink) html += '<p class="sermon-note">Missed last week? <a href="' + esc(d.sermonLink) + '">Catch the sermon here</a>.</p>';
+      html += '</section>';
+      html += '<hr class="rule">';
     }
 
     if (d.waysToServe && d.waysToServe.filter(Boolean).length) {
@@ -451,20 +532,49 @@
       html += '</ul></section>';
     }
 
-    if (d.prayer && d.prayer.filter(Boolean).length) {
-      html += '<section><h2>Prayer Requests</h2><ul class="plain prayer">';
-      d.prayer.forEach(function (item) {
-        if (item) html += '<li>' + esc(item) + '</li>';
-      });
-      html += '</ul></section>';
-    }
-
     if (d.upcoming && d.upcoming.filter(Boolean).length) {
       html += '<section><h2>Upcoming Events</h2><ul class="plain">';
       d.upcoming.forEach(function (item) {
         if (item) html += '<li>' + esc(item) + '</li>';
       });
       html += '</ul></section>';
+    }
+
+    if (d.prayer && d.prayer.filter(Boolean).length) {
+      html += '<section><h2>Prayer Requests</h2><ul class="plain prayer">';
+      d.prayer.forEach(function (item) {
+        if (item) html += '<li>' + esc(item) + '</li>';
+      });
+      html += '</ul>';
+      if (d.prayerRequestLink) {
+        html += '<p class="submit-prayer-note"><a href="' + esc(d.prayerRequestLink) + '">Submit a Prayer Request</a></p>';
+      } else {
+        html += '<p class="submit-prayer-note">Submit a Prayer Request \u2014 <em>coming soon</em></p>';
+      }
+      html += '</section>';
+    }
+
+    if (d.prayerSalvationRef || d.prayerSalvationVerse || d.prayerSalvationText) {
+      html += '<section class="prayer-special"><h2>A Prayer For Salvation</h2>';
+      if (d.prayerSalvationRef) html += '<p class="scripture-ref">' + esc(d.prayerSalvationRef) + '</p>';
+      if (d.prayerSalvationVerse) html += '<p class="scripture-text">' + esc(d.prayerSalvationVerse) + '</p>';
+      if (d.prayerSalvationText) html += '<p class="prayer-body">' + esc(d.prayerSalvationText) + '</p>';
+      html += '</section>';
+    }
+
+    if (d.prayerHolinessRef || d.prayerHolinessVerse || d.prayerHolinessText) {
+      html += '<section class="prayer-special"><h2>A Prayer of Holiness For This Week</h2>';
+      if (d.prayerHolinessRef) html += '<p class="scripture-ref">' + esc(d.prayerHolinessRef) + '</p>';
+      if (d.prayerHolinessVerse) html += '<p class="scripture-text">' + esc(d.prayerHolinessVerse) + '</p>';
+      if (d.prayerHolinessText) html += '<p class="prayer-body">' + esc(d.prayerHolinessText) + '</p>';
+      html += '</section>';
+    }
+
+    if (d.lastSermonTitle || d.sermonLink) {
+      html += '<section class="prayer-special"><h2>Missed Last Week?</h2>';
+      if (d.lastSermonTitle) html += '<p class="scripture-ref">' + esc(d.lastSermonTitle) + '</p>';
+      if (d.sermonLink) html += '<p class="sermon-note"><a href="' + esc(d.sermonLink) + '">Catch the sermon here</a></p>';
+      html += '</section>';
     }
 
     var links = [];
@@ -556,15 +666,18 @@
     html += '<div class="two-col">';
     html += '<div class="field"><label>Church name</label><input type="text" name="churchName" value="' + esc(d.churchName) + '"></div>';
     html += '<div class="field"><label>Week of</label><input type="text" name="weekOf" value="' + esc(d.weekOf) + '" placeholder="Sunday, Month Day"></div>';
+    html += '<div class="field"><label>Occasion badge (optional, e.g. Conference Sunday)</label><input type="text" name="occasion" value="' + esc(d.occasion) + '"></div>';
     html += '</div>';
     html += '<div class="field"><label>Tagline</label><input type="text" name="tagline" value="' + esc(d.tagline) + '"></div>';
+    html += '<div class="field"><label>Note under the date</label><input type="text" name="dateNote" value="' + esc(d.dateNote) + '"></div>';
 
     html += '<hr class="rule">';
+    html += '<div class="field"><label>Scripture reference (stands alone above the text)</label><input type="text" name="scriptureRef" value="' + esc(d.scriptureRef) + '" placeholder="e.g. John 3:16"></div>';
     html += '<div class="field"><label>Today\u2019s Text (Scripture)</label><textarea name="scripture">' + esc(d.scripture) + '</textarea></div>';
     html += '<div class="field"><label>Preaching line</label><input type="text" name="preacher" value="' + esc(d.preacher) + '"></div>';
 
     html += '<div class="field"><label>Welcome message</label><textarea name="welcome">' + esc(d.welcome) + '</textarea></div>';
-    html += '<div class="field"><label>Purpose (mission statement)</label><textarea name="purpose">' + esc(d.purpose) + '</textarea></div>';
+    html += '<div class="field"><label>Our Purpose (mission statement)</label><textarea name="purpose">' + esc(d.purpose) + '</textarea></div>';
 
     html += listEditorHTML('waysToServe', 'Ways to Serve This Week', d.waysToServe);
 
@@ -572,11 +685,20 @@
     html += listEditorHTML('order', 'Order of service', d.order);
     html += listEditorHTML('announcements', 'Announcements', d.announcements);
     html += listEditorHTML('prayer', 'Prayer requests', d.prayer);
+    html += '<div class="field"><label>Submit-a-prayer-request link (leave blank to show \u201ccoming soon\u201d)</label><input type="text" name="prayerRequestLink" value="' + esc(d.prayerRequestLink) + '" placeholder="https://"></div>';
+    html += '<div class="field"><label>A Prayer For Salvation \u2014 reference</label><input type="text" name="prayerSalvationRef" value="' + esc(d.prayerSalvationRef) + '" placeholder="e.g. Psalm 51:10"></div>';
+    html += '<div class="field"><label>A Prayer For Salvation \u2014 verse</label><textarea name="prayerSalvationVerse">' + esc(d.prayerSalvationVerse) + '</textarea></div>';
+    html += '<div class="field"><label>A Prayer For Salvation \u2014 prayer text</label><textarea name="prayerSalvationText">' + esc(d.prayerSalvationText) + '</textarea></div>';
+    html += '<div class="field"><label>A Prayer of Holiness \u2014 reference</label><input type="text" name="prayerHolinessRef" value="' + esc(d.prayerHolinessRef) + '" placeholder="e.g. 2 Corinthians 7:1"></div>';
+    html += '<div class="field"><label>A Prayer of Holiness \u2014 verse</label><textarea name="prayerHolinessVerse">' + esc(d.prayerHolinessVerse) + '</textarea></div>';
+    html += '<div class="field"><label>A Prayer of Holiness \u2014 prayer text</label><textarea name="prayerHolinessText">' + esc(d.prayerHolinessText) + '</textarea></div>';
     html += listEditorHTML('upcoming', 'Upcoming Events', d.upcoming);
 
     html += '<hr class="rule">';
     html += '<div class="field"><label>Giving link</label><input type="text" name="givingLink" value="' + esc(d.givingLink) + '" placeholder="https://"></div>';
     html += '<div class="field"><label>Livestream link</label><input type="text" name="livestreamLink" value="' + esc(d.livestreamLink) + '" placeholder="https://"></div>';
+    html += '<div class="field"><label>Last week\u2019s sermon link (audio/video)</label><input type="text" name="sermonLink" value="' + esc(d.sermonLink) + '" placeholder="https://"></div>';
+    html += '<div class="field"><label>Last week\u2019s sermon title</label><input type="text" name="lastSermonTitle" value="' + esc(d.lastSermonTitle) + '"></div>';
     html += '<div class="field"><label>Website link</label><input type="text" name="websiteLink" value="' + esc(d.websiteLink) + '" placeholder="https://"></div>';
 
     html += '<hr class="rule">';
@@ -613,7 +735,7 @@
     var d = getData();
 
     var fd = new FormData(form);
-    ['churchName','weekOf','tagline','scripture','preacher','welcome','purpose','givingLink','livestreamLink','websiteLink','contactName','contactPhone','contactAddress'].forEach(function (k) {
+    ['churchName','weekOf','occasion','tagline','dateNote','scriptureRef','scripture','preacher','welcome','purpose','givingLink','livestreamLink','sermonLink','lastSermonTitle','websiteLink','contactName','contactPhone','contactAddress','prayerSalvationRef','prayerSalvationVerse','prayerSalvationText','prayerHolinessRef','prayerHolinessVerse','prayerHolinessText','prayerRequestLink'].forEach(function (k) {
       d[k] = fd.get(k) || '';
     });
     d.order = collectList('order').filter(function (v) { return v.trim() !== ''; });
