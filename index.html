@@ -179,6 +179,13 @@
   section.todays-text h2,
   section.prayer-special h2 { margin-bottom: 12px; }
 
+  .sermon-blurb {
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 8px;
+    max-width: 62ch;
+  }
+
   .prayer-body {
     line-height: 1.7;
     color: var(--ink);
@@ -399,10 +406,10 @@
 {
   "churchName": "Stanton Bible Methodist Church",
   "tagline": "Sunday Worship Bulletin",
-  "weekOf": "Sunday, October 11, 2026",
+  "weekOf": "Sunday, October 18, 2026",
   "occasion": "",
-  "scriptureRef": "Jeremiah 17:7\u20138",
-  "scripture": "Blessed is the man who trusts in the Lord,\nAnd whose hope is the Lord.\nFor he shall be like a tree planted by the waters,\nWhich spreads out its roots by the river,\nAnd will not fear when heat comes;\nBut its leaf will be green,\nAnd will not be anxious in the year of drought,\nNor will cease from yielding fruit.",
+  "scriptureRef": "John 13:34\u201335",
+  "scripture": "A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. By this all will know that you are My disciples, if you have love for one another.",
   "preacher": "Preaching \u2013 Pastor Logan Sankey",
   "welcome": "Good morning, and welcome! We\u2019re so glad you\u2019re here. Whether you\u2019ve walked through these doors for decades or this is your very first visit, you are family here. Our prayer is that you\u2019ll meet with the Lord this morning and leave refreshed in His Word, encouraged in His love, and strengthened in His holiness and grace.",
   "purpose": "Love God Rightly - Serve Others Selflessly - Make Disciples Tirelessly ",
@@ -419,14 +426,13 @@
     "Opening Prayer",
     "Meet & Greet",
     "Congregational Singing",
+    "Testimonies / Prayer",
     "Special Song - Jennifer",
     "Sermon"
   ],
   "announcements": [
-    "Due to the viewing and funeral of Joe Harrison, we will not be having evening service tonight.",
-    "Thanks to everyone who donated diapers for Callaway. The Sankeys are so appreciative!",
-    "The church will be hosting a \"Prayer Tent\" at the supermarket in Maplesville this coming Saturday!",
-    "Christmas Program practice will start next Sunday night after the evening service!"
+    "Christmas Program practice starts tonight after evening service!",
+    "Who will YOU serve this week? Check out the Serve Board in the foyer!"
   ],
   "upcoming": [
     "Pastor Appreciation Sunday - Oct. 25",
@@ -437,21 +443,27 @@
   ],
   "prayer": [
     "Harrison family in the passing of Joe Harrison",
-    "Cally - brain surgery",
-    "Leslie Benton ",
+    "Cally - recovering from surgery",
+    "The Bentons",
     "Rhonda Headley - cancer",
-    "Donnie Carter's sister Kristine - stroke"
+    "Donnie Carter's sister Kristine - stroke",
+    "Many other unspoken needs",
+    "Pray for discipleship opportunities to pop up in your life"
   ],
   "prayerRequestLink": "https://docs.google.com/forms/d/e/1FAIpQLSdX1LxOD9iUYXiJJcw-Dv074CnZAMQPYNDNEwZ_2D8YSce0FQ/viewform?usp=publish-editor",
   "givingLink": "",
   "livestreamLink": "",
   "websiteLink": "",
-  "sermonLink": "https://youtu.be/rvw-tNMycZk?si=QYUnG6dndkc_P_d2",
-  "lastSermonTitle": "\u201cUnlikely Places, Unlikely People, Unlikely Providence\u201d",
+  "sermonLink": "https://youtu.be/7s0jOpmuCSk?si=NpWeXCBqnvxZQ-D3",
+  "lastSermonTitle": "\u201cIt\u2019s Always Too Soon To Give Up\u201d",
   "contactName": "",
   "contactPhone": "",
   "contactAddress": "",
-  "updatedNote": "Updated Sep 20, 2026"
+  "updatedNote": "Updated Sep 20, 2026",
+  "sermonNoteLead": "Couldn\u2019t post last week\u2019s message \u2014 here\u2019s one from the archives:",
+  "sermonHeading": "Worth a Listen",
+  "sermonBlurb": "We weren\u2019t able to post last week\u2019s message, so we dug into the archives for one that\u2019s too good to miss. If you\u2019ve ever felt like throwing in the towel, press play and let it lift you back up.",
+  "sermonLinkText": "Press play and be encouraged"
 }
 </script>
 
@@ -509,7 +521,7 @@
       if (d.scriptureRef) html += '<p class="scripture-ref">' + esc(d.scriptureRef) + '</p>';
       if (d.scripture) html += '<p class="scripture-text">' + esc(d.scripture) + '</p>';
       if (d.preacher) html += '<p class="preacher-line">' + esc(d.preacher) + '</p>';
-      if (d.sermonLink) html += '<p class="sermon-note">Missed last week? <a href="' + esc(d.sermonLink) + '">Catch the sermon here</a>.</p>';
+      if (d.sermonLink) html += '<p class="sermon-note">' + esc(d.sermonNoteLead || 'Missed last week?') + ' <a href="' + esc(d.sermonLink) + '">' + esc(d.lastSermonTitle || 'Catch the sermon here') + '</a></p>';
       html += '</section>';
       html += '<hr class="rule">';
     }
@@ -577,9 +589,10 @@
     }
 
     if (d.lastSermonTitle || d.sermonLink) {
-      html += '<section class="prayer-special"><h2>Missed Last Week?</h2>';
+      html += '<section class="prayer-special"><h2>' + esc(d.sermonHeading || 'Missed Last Week?') + '</h2>';
       if (d.lastSermonTitle) html += '<p class="scripture-ref">' + esc(d.lastSermonTitle) + '</p>';
-      if (d.sermonLink) html += '<p class="sermon-note"><a href="' + esc(d.sermonLink) + '">Catch the sermon here</a></p>';
+      if (d.sermonBlurb) html += '<p class="sermon-blurb">' + esc(d.sermonBlurb) + '</p>';
+      if (d.sermonLink) html += '<p class="sermon-note"><a href="' + esc(d.sermonLink) + '">' + esc(d.sermonLinkText || 'Catch the sermon here') + '</a></p>';
       html += '</section>';
     }
 
