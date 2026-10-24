@@ -406,10 +406,10 @@
 {
   "churchName": "Stanton Bible Methodist Church",
   "tagline": "Sunday Worship Bulletin",
-  "weekOf": "Sunday, October 18, 2026",
-  "occasion": "",
-  "scriptureRef": "John 13:34\u201335",
-  "scripture": "A new commandment I give to you, that you love one another; as I have loved you, that you also love one another. By this all will know that you are My disciples, if you have love for one another.",
+  "weekOf": "Sunday, October 25, 2026",
+  "occasion": "Pastor Appreciation Sunday",
+  "scriptureRef": "Galatians 6:1",
+  "scripture": "Brethren, if a man is overtaken in any trespass, you who are spiritual restore such a one in a spirit of gentleness, considering yourself lest you also be tempted.",
   "preacher": "Preaching \u2013 Pastor Logan Sankey",
   "welcome": "Good morning, and welcome! We\u2019re so glad you\u2019re here. Whether you\u2019ve walked through these doors for decades or this is your very first visit, you are family here. Our prayer is that you\u2019ll meet with the Lord this morning and leave refreshed in His Word, encouraged in His love, and strengthened in His holiness and grace.",
   "purpose": "Love God Rightly - Serve Others Selflessly - Make Disciples Tirelessly ",
@@ -427,15 +427,14 @@
     "Meet & Greet",
     "Congregational Singing",
     "Testimonies / Prayer",
-    "Special Song - Bro. Mike",
+    "Special Song - Miranda",
     "Sermon"
   ],
   "announcements": [
-    "Christmas Program practice starts tonight after evening service!",
+    "There will be no evening service tonight.",
     "Who will YOU serve this week? Check out the Serve Board in the foyer!"
   ],
   "upcoming": [
-    "Pastor Appreciation Sunday - Oct. 25",
     "AL IHC - Nov. 4-6",
     "Laymen Appreciation Sunday - Nov. 15",
     "Tentative Business Meeting - Nov. 15",
@@ -447,7 +446,7 @@
     "The Bentons",
     "Rhonda Headley - cancer",
     "Donnie Carter's sister Kristine - stroke",
-    "The many requests we prayed for at the Prayer Tent yesterday",
+    "The many requests we prayed for at the Prayer Tent recently",
     "Many other unspoken needs",
     "Pray for discipleship opportunities to pop up in your life"
   ],
@@ -455,16 +454,17 @@
   "givingLink": "",
   "livestreamLink": "",
   "websiteLink": "",
-  "sermonLink": "https://youtu.be/7s0jOpmuCSk?si=NpWeXCBqnvxZQ-D3",
-  "lastSermonTitle": "\u201cIt\u2019s Always Too Soon To Give Up\u201d",
+  "sermonLink": "https://www.youtube.com/watch?v=ik7CKEXo4s8",
+  "lastSermonTitle": "\u201cMoving From Me To We: I\u2019ve Got Your Back\u201d",
   "contactName": "",
   "contactPhone": "",
   "contactAddress": "",
   "updatedNote": "Updated Sep 20, 2026",
-  "sermonNoteLead": "Couldn\u2019t post last week\u2019s message \u2014 here\u2019s one from the archives:",
-  "sermonHeading": "Worth a Listen",
-  "sermonBlurb": "We weren\u2019t able to post last week\u2019s message, so we dug into the archives for one that\u2019s too good to miss. If you\u2019ve ever felt like throwing in the towel, press play and let it lift you back up.",
-  "sermonLinkText": "Press play and be encouraged"
+  "sermonNoteLead": "Missed last week?",
+  "sermonHeading": "Missed Last Week?",
+  "sermonBlurb": "",
+  "sermonLinkText": "Catch the sermon here",
+  "sermonNoteLinkText": "Catch the sermon here"
 }
 </script>
 
@@ -522,7 +522,7 @@
       if (d.scriptureRef) html += '<p class="scripture-ref">' + esc(d.scriptureRef) + '</p>';
       if (d.scripture) html += '<p class="scripture-text">' + esc(d.scripture) + '</p>';
       if (d.preacher) html += '<p class="preacher-line">' + esc(d.preacher) + '</p>';
-      if (d.sermonLink) html += '<p class="sermon-note">' + esc(d.sermonNoteLead || 'Missed last week?') + ' <a href="' + esc(d.sermonLink) + '">' + esc(d.lastSermonTitle || 'Catch the sermon here') + '</a></p>';
+      if (d.sermonLink) html += '<p class="sermon-note">' + esc(d.sermonNoteLead || 'Missed last week?') + ' <a href="' + esc(d.sermonLink) + '">' + esc(d.sermonNoteLinkText || d.lastSermonTitle || 'Catch the sermon here') + '</a></p>';
       html += '</section>';
       html += '<hr class="rule">';
     }
